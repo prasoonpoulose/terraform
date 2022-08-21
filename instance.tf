@@ -17,7 +17,7 @@ resource "aws_instance" "Terraform-lab" {
   associate_public_ip_address = true
   key_name= "rhel"
   tags = {
-    Name = "terraform-lab"
+    Name = "ldap-client"
   }
   user_data = <<-EOF
     #!/bin/bash
