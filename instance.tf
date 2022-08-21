@@ -10,14 +10,14 @@ variable "aws_region" {
     default = "us-east-1"
 }
 
-resource "aws_instance" "Terraform-lab" {
+resource "aws_instance" "ldap-client" {
   count = "1"
   ami           = "ami-090fa75af13c156b4"
   instance_type = "t2.micro"
   associate_public_ip_address = true
   key_name= "rhel"
   tags = {
-    Name = "ldap-master"
+    Name = "ldap-client"
   }
   user_data = <<-EOF
     #!/bin/bash
