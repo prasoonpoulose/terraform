@@ -15,7 +15,7 @@ resource "aws_instance" "linux" {
   ami           = "ami-090fa75af13c156b4"
   instance_type = "t2.micro"
   associate_public_ip_address = true
-  key_name= "rhel"
+  key_name= "ansible_key"
   tags = {
     Name = "linux"
   }
